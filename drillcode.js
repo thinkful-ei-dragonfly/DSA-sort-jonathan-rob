@@ -72,6 +72,7 @@ function merge(left, right, array) {
 /* 5. Sorting a linked list using merge sort */
 function mergeSortLL(list) {
   // check if list is empty
+  // console.log(list.size())
   if (list.size() <= 1) {
     return list;
   }
@@ -84,7 +85,7 @@ function mergeSortLL(list) {
     if (i === 0) {
       leftCurrNode = list.head;
     }
-    left.insertLast(leftCurrNode);
+    left.insertLast(leftCurrNode.value);
     leftCurrNode = leftCurrNode.next;
   }
 
@@ -93,7 +94,7 @@ function mergeSortLL(list) {
     if (i === Math.floor(list.size() / 2) + 1) {
       rightCurrNode = leftCurrNode
     }
-    right.insertLast(rightCurrNode);
+    right.insertLast(rightCurrNode.value);
     rightCurrNode = rightCurrNode.next;
   }
 
@@ -113,7 +114,7 @@ function mergeLL(left, right) {
       rightPtr = rightPtr.next;
     } else {
       tempNode = leftPtr.value;
-      leftPtr.next;
+      leftPtr = leftPtr.next;
     }
     
     if (!newLL.head ) {
@@ -146,7 +147,6 @@ function main() {
 
   // LL.printAll();
   // console.log(LL.size());
-
   let newSortedList = mergeSortLL(LL);
   newSortedList.printAll();
 

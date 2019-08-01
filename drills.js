@@ -43,4 +43,7 @@
 // 2nd partion: 10, 3, 13, 15, 19, 14, 17, 16, 9, 12
 
 // When using the first item on the list as a pivot
-// 
+// Original list: 14, 17, 13, 15, 19, 10, 3, 16, 9, 12
+// 1st partition: 14, 17, 13, 15, 19, 10, 3[i], 12, 9[j], 16
+// 2nd partition: 14, 17, 13, 15[i], 9, 10, 3, 12[j], 19, 16
+// 3rd partition: 14, 17, 13, 12, 9, 10, 3, 15, 19, 16
